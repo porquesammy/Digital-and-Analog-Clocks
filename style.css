@@ -1,0 +1,83 @@
+
+    @font-face{
+      font-family:'digital-clock-font';
+      src: url('./digital-7.regular.ttf');
+    }
+
+
+    html {
+      background: #018DED;
+      background-size: cover;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid yellow;
+      border-radius: 50%;
+      margin: 10px auto;
+      position: relative;
+      padding: 2rem;
+      background:white;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px rgb(104, 102, 236),
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+  
+    }
+    #middle-circle{
+      position:relative;
+      top:39%;
+      left:39%;
+      width: 11%;
+      height:11%;
+      transform:translateX(65%)
+                translateY(65%);
+      border-radius: 50%;
+      background:black;
+    } 
+    .clock-face {
+      position: relative;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+
+    }
+    #digital{
+      font-family: digital-clock-font;
+      font-size: 5em;
+      color:azure;
+      background:black;
+      border: 5px solid white;
+      width: 4em;
+      height: .75em;
+      padding: 20px;
+    }
+
+
+    .hand {
+      width: 47%;
+      height: 3%;
+      top:50%;
+      border-radius: 10px;
+      background: black;
+      position: absolute;
+      transform-origin: 110%;
+      transition: .3s;
+      transition-timing-function: cubic-bezier(0.4, 2.86, 0.34, 1.05);
+      transform: rotate(90deg);
+    }
